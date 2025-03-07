@@ -9,7 +9,7 @@ SetCompressor /SOLID lzma  ; 使用高效压缩
 
 ; 安装目录设置
 InstallDir "$PROGRAMFILES\OpenDuck"
-InstallDirRegKey HKLM "Software\OpenDuck" "Install_Dir" ; <--- 修正关键行
+InstallDirRegKey HKLM "Software\OpenDuck" "Install_Dir"
 
 !include MUI2.nsh
 
