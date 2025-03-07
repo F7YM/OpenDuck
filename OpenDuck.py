@@ -1,4 +1,4 @@
-import http.server, socket, socketserver, os, json
+import http.server, socket, socketserver, os, json, getpass
 
 port = None  # 端口号
 command = None  # 命令
@@ -6,7 +6,7 @@ prompt = None  # 返回字符串
 
 def loadConfig():
     try:
-        with open('openduck_config.json', 'r', encoding='UTF-8') as f:
+        with open(f'C:\\Users\\{getpass.getuser()}\openduck_config.json', 'r', encoding='UTF-8') as f:
             f = json.load(f)
             global port, command, prompt
             try:
@@ -17,7 +17,7 @@ def loadConfig():
                 print('[Error] 配置错误。请检查openduck_config.json文件或删除openduck_config.json文件。')
                 exit(1)
     except FileNotFoundError:
-        with open('openduck_config.json', 'w', encoding='UTF-8') as f:
+        with open(f'C:\\Users\\{getpass.getuser()}\openduck_config.json', 'w', encoding='UTF-8') as f:
             defaultConfig = {'port':1145, 'command':'Rundll32.exe user32.dll, LockWorkStation', 'prompt':'搞定了。'}
             f.write(str(json.dumps(defaultConfig, indent=4)))
         loadConfig()
