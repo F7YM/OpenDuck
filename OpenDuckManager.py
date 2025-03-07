@@ -8,8 +8,9 @@ while True:
     for proc in psutil.process_iter(attrs=['pid', 'name']):
         if proc.info['name'] == 'OpenDuckCore.exe':
             openDuckStatus = True
-
-    menu = easygui.choicebox(f'OpenDuckManager\n*OpenDuck配置文件:C:\\Users\\{getpass.getuser()}\openduck_config.json\n*OpenDuck状态：{openDuckStatus}', 'OpenDuckManager', ['开启OpenDuck', '关闭OpenDuck', '设置开机自启', '关闭开机自启'])
+    menuMsg = f'OpenDuckManager\n*OpenDuck配置文件:C:\\Users\\{getpass.getuser()}\openduck_config.json\n*OpenDuck状态：{openDuckStatus}'
+    menuChoices = ['开启OpenDuck', '关闭OpenDuck', '设置开机自启', '关闭开机自启', '编辑配置文件']
+    menu = easygui.choicebox(menuMsg, 'OpenDuckManager', menuChoices)
     if menu == '开启OpenDuck':
         if openDuckStatus is True:
             easygui.msgbox('OpenDuck已在运行。', 'OpenDuckManager')
@@ -36,5 +37,7 @@ while True:
             easygui.msgbox('成功关闭开机自启。', 'OpenDuckManager')
         except Exception as e:
             easygui.msgbox(f'关闭开机自启失败。\n原因:{e}', 'OpenDuckManager')
+    elif menu == '编辑配置文件':
+        os.system(rf'notepad C:\Users\{getpass.getuser()}\openduck_config.json')
     elif menu is None:
         exit()
