@@ -9,4 +9,4 @@ OpenDuck配置文件位于C:\Users\你的用户名\openduck_config.json。
 ## 公网使用
 **在公网使用OpenDuck有风险，出现任何安全问题与OpenDuck无关。**
 
-使用Frp工具（如[OpenFrp](www.openfrp.net)）映射OpenDuck端口，访问Frp工具提供的URL即可。
+使用Frp工具（如[OpenFrp](https://www.openfrp.net)）映射OpenDuck端口，访问Frp工具提供的URL即可。
