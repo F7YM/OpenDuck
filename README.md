@@ -3,7 +3,7 @@
 ### 作用
 **在内网其他设备访问主机OpenDuck端口，即可在主机触发预设命令。** 使用场景：暂时离开座位，使用OpenDuck远程锁定电脑；使用Siri + 快捷指令实现Siri控制电脑......
 ### 技术
-OpenDuck灵感来源自[神秘鸭](https://wequ.net/cn/)，使用Python开发，Nuitka打包，NSIS作为安装程序。OpenDuckManager使用easygui库。NSIS脚本/OpenDuck开放端口功能均为DeepSeek实现，其他地方没有使用AI（Debug用途不计入内）。
+OpenDuck灵感来源自[神秘鸭](https://wequ.net/cn/)，使用Python开发，Nuitka打包，NSIS作为安装程序。OpenDuckManager使用easygui库。部分代码使用AI。
 ## 配置文件
 OpenDuck配置文件位于C:\Users\你的用户名\openduck_config.json。
 |  键名  |  作用  |
