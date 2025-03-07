@@ -9,7 +9,11 @@ OpenDuck配置文件位于C:\Users\你的用户名\openduck_config.json。
 |  command  |  要执行的cmd命令，默认锁定电脑  |
 |  prompt  |  返回结果，默认“搞定了。”  |
 ## 内网使用
-在内网访问`你的内网ip:OpenDuck端口`即可。
+### 通用思路
+在内网访问`主机ip:OpenDuck端口号`。
+### Siri + 快捷指令
+新建快捷指令，找到“获取URL内容”操作，输入`http://主机ip:OpenDuck端口号`；添加“显示提醒”操作，关闭显示取消按钮，在输入框内选择变量为URL的内容（此操作非必需，但是Siri将不会播报返回值）。最后将快捷指令名称改为你要对Siri下的指令即可（如：锁定我的电脑）。
+你也可以套用[Demo](https://www.icloud.com/shortcuts/dc769b9d29e24fc7b37b657ad73e7bcf)。
 ## 公网使用
 **在公网使用OpenDuck有风险，出现任何安全问题与OpenDuck无关。**
 
