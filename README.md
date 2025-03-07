@@ -3,6 +3,7 @@
 ### 配置文件
 OpenDuck配置文件位于C:\Users\你的用户名\openduck_config.json。
 |  键名  |  作用  |
+|  --  |  --  |
 |  port  |  要使用的端口，默认1145  |
 |  command  |  要执行的cmd命令  |
 |  prompt  |  返回结果，默认“搞定了。”  |
